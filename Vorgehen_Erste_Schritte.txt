@@ -8,6 +8,6 @@
 
 4. Webserver-Check über 192.168.1.1, dort configuration Mode und Pin 0000
 
-5. Verbindung von Eclipse auf den Master (unlock Control mit Seriennummer des Masters (automatisch gefunden) und Code ???) Hier leider gescheietert
+5. Verbindung von Eclipse auf den Master (unlock Control mit Seriennummer des Masters (automatisch gefunden) und Code 1 097 098) 
 
 6. Anschließen des Digital I/O-Moduls, braun +, blau -, Fehler da nicht projektiert
