@@ -1,0 +1,130 @@
+/*-------------------------------------------------------------------*
+ *                                                                   *
+ *                       Bihl+Wiedemann GmbH                         *
+ *                                                                   *
+ *                                                                   *
+ *       project: Control_III                                        *
+ *   module name: main.c                                             *
+ *        author: Christian Sommerfeld                               *
+ *          date: 2015-02-26                                         *
+ *                                                                   *
+ *  version: 1.0 first version                                       *
+ *                                                                   *
+ *                                                                   *                                                                *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  include files                                                    *
+ *-------------------------------------------------------------------*/
+#include "control.h"
+#include "string.h"
+#include "control_io.h"
+#include "enet.h"
+
+/*-------------------------------------------------------------------*
+ *  local definitions                                                *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  external declarations                                            *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  public data                                                      *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  private data                                                     *
+ *-------------------------------------------------------------------*/
+
+static unsigned short system_ticks;
+static unsigned short end_timer;
+
+/*-------------------------------------------------------------------*
+ *  private functions                                                *
+ *-------------------------------------------------------------------*/
+
+static void timer_function ( void )
+{
+	/* timer interrupt every 10 ms */
+	system_ticks++;
+}
+
+/*-------------------------------------------------------------------*
+ *  public functions                                                 *
+ *-------------------------------------------------------------------*/
+
+int main ( void )
+{
+	//initialization of the Debugger
+	//cctrl_func.CCtrlBreakpoint();
+
+	unsigned char		ctrl_flags;
+	int 				i = 0;
+	unsigned char asi5_idi[3];
+	unsigned short len;
+
+	AASiProcessData 	odi[2];
+	AASiProcessData 	idi[2];
+	AASiCtrlAccODI 		acc_odi;
+	AASiEcFlags 		ecflags;
+
+	/* We want to access all ASi-3 odis */
+	for (i=0;i<32;i++)
+	{
+		acc_odi[i] = 0xFF;	
+	}
+	cctrl_func.AASiWriteCtrlAccODI ( 0, acc_odi, 0, 64 );
+
+	//clean all odis
+	for (i=0;i<32;i++)
+	{
+		odi[0][i] = 0x00;
+	}
+
+	/* init timer function with 10ms ticks */
+    cctrl_func.CCtrlInitTimer ( 10, timer_function );
+
+    /* init watchdog */
+	//cctrl_func.CCtrlInitWdg( 10 );
+
+	for(;;)
+	{
+
+		/* trigger watchdog */
+		//cctrl_func.CCtrlTriggerWdg();
+
+		 /* Define data exchange for AS-i Circuit 1 and 2*/
+		 cctrl_func.AASiDataExchange(0, odi[0], idi[0], &ecflags);
+		 cctrl_func.AASiDataExchange(1, odi[1], idi[1], &ecflags);
+
+		 /* read idi ASi-5 Slave logAddr 1 8I/8O */
+		 len = 1;
+		 cctrl_func.Asi5ReadASi5Idi(0, &asi5_idi[0], &len, 0);
+
+		 /* read idi ASi-5 Slave logAddr 2 16I */
+		 len = 2;
+		 cctrl_func.Asi5ReadASi5Idi(0, &asi5_idi[1], &len, 1);
+
+		//Timer 1 100 * 10ms = 1sec.
+		if ( ((unsigned short)(system_ticks - end_timer)) > 100)
+		{
+			end_timer = system_ticks;
+		}
+
+		/* to check Cycletime */
+		cctrl_func.CCtrlEvalCycletime();
+
+		/*read flags if we should stop control*/
+		cctrl_func.CCtrlReadFlags( &ctrl_flags );
+		if ( !( ctrl_flags & CCTRL_FLAG_RUN ) )
+		{
+			return 1;
+		}
+	
+	}
+}
+/*-------------------------------------------------------------------*
+ *  eof                                                              *
+ *-------------------------------------------------------------------*/
+

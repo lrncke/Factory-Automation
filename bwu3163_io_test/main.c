@@ -1,0 +1,127 @@
+/*-------------------------------------------------------------------*
+ *                                                                   *
+ *                       Bihl+Wiedemann GmbH                         *
+ *                                                                   *
+ *                                                                   *
+ *       project: Control_III                                        *
+ *   module name: main.c                                             *
+ *        author: Christian Sommerfeld                               *
+ *          date: 2015-02-26                                         *
+ *                                                                   *
+ *  version: 1.0 first version                                       *
+ *                                                                   *
+ *                                                                   *
+                                                 *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  include files                                                    *
+ *-------------------------------------------------------------------*/
+#include "control.h"
+#include <string.h>
+#include "control_io.h"
+#include "enet.h"
+
+
+/*-------------------------------------------------------------------*
+ *  local definitions                                                *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  external declarations                                            *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  public data                                                      *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  private data                                                     *
+ *-------------------------------------------------------------------*/
+
+static unsigned short system_ticks;
+static unsigned short end_timer;
+
+/*-------------------------------------------------------------------*
+ *  private functions                                                *
+ *-------------------------------------------------------------------*/
+
+static void timer_function ( void )
+{
+        /* timer interrupt every 10 ms */
+        system_ticks++;
+}
+
+/*-------------------------------------------------------------------*
+ *  public functions                                                 *
+ *-------------------------------------------------------------------*/
+
+int main ( void )
+{
+        //initialization of the Debugger
+        //cctrl_func.CCtrlBreakpoint();
+
+        unsigned char                ctrl_flags;
+        unsigned char                asi5_accodi[2];//Länge entspricht der Anzahl der in der Anlage vorhandenen logischen Adressen
+        unsigned char                asi5_odi[2];//Ausgänge die gesetzt werden sollen (Hex-Werte)
+
+        unsigned char               asi5_idi[1];//Eingänge die gelesen werden sollen (Hex-Werte)
+
+        unsigned short 				length 			= 1;
+
+        /* Access ASi5 logical Slave 1 (1 Byte / Slave) */
+        asi5_accodi[0] = 0xFF;
+
+        cctrl_func.Asi5WriteCtrlAccODI(0, asi5_accodi, 1, 1);
+
+        /* init timer function with 10ms ticks */
+        cctrl_func.CCtrlInitTimer ( 1, timer_function );
+
+        /* init watchdog */
+        //cctrl_func.CCtrlInitWdg( 10 );
+
+    	//asi5_odi[0] = 0xFF; //Hier werden die Ausgangskonfigurationen gesetzt
+
+
+        for(;;)
+        {
+
+                /* trigger watchdog */
+                //cctrl_func.CCtrlTriggerWdg();
+
+                /* Define data exchange for AS-i Circuit 1 and 2*/
+
+
+                //Timer 1 100 * 10ms = 1sec.
+                if ( ((unsigned short)(system_ticks - end_timer)) > 50)
+                {
+                        end_timer = system_ticks;
+                        cctrl_func.Asi5ReadASi5Idi(0, &asi5_idi[0], &length, 1);
+
+                        	if ( (asi5_idi[0] & (0x01 << 0))) {							// 0x01 = I1, 0x01 << 1 = I2, ...
+                        		asi5_odi[0] = 0x01;
+                        	    cctrl_func.Asi5WriteASi5Odi(0, &asi5_odi[0], 1, 1);
+                        	}
+							else {
+								asi5_odi[0] = 0x00;
+								cctrl_func.Asi5WriteASi5Odi(0, &asi5_odi[0], 1, 1);
+							}
+
+                }
+
+                /* to check Cycletime */
+                cctrl_func.CCtrlEvalCycletime();
+
+                /*read flags if we should stop control*/
+                cctrl_func.CCtrlReadFlags( &ctrl_flags );
+                if ( !( ctrl_flags & CCTRL_FLAG_RUN ) )
+                {
+                        return 1;
+                }
+
+        }
+}
+/*-------------------------------------------------------------------*
+ *  eof                                                              *
+ *-------------------------------------------------------------------*/
+//E79 -> Fehler im Programm, Variable nicht definiert oder ähnliches
