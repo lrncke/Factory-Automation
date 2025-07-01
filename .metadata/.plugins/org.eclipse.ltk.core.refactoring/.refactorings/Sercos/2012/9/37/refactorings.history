@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Sercos/pbus.ld&apos; to &apos;sercos.ld&apos;" description="Rename resource &apos;pbus.ld&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="pbus.ld" name="sercos.ld" stamp="1347369616440" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Sercos/pbus.mak&apos; to &apos;sercos.mak&apos;" description="Rename resource &apos;pbus.mak&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="pbus.mak" name="sercos.mak" stamp="1347369624396" updateReferences="true"/>
+</session>

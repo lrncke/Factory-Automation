@@ -1,0 +1,17 @@
+
+**** Build of configuration release for project Alternative Gateway ****
+
+E:\eclipse_control\Compiler\msys32\usr\bin\sh -c export PATH=../../Compiler/msys32/usr/bin:$PATH ;make -sf pnio.mak DEBUG=1 all 
+ -----------------------
+  control -- Release  
+ -----------------------
+ 
+
+main.c ...
+
+   ROM:    504 ( 0.19%)
+   RAM:      4 ( 0.00%)
+        -------
+Memory:    508 ( 0.19%)
+
+writing .release/control.lss ...

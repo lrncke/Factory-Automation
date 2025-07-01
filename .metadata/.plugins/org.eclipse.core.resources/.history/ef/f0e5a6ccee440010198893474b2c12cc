@@ -1,0 +1,390 @@
+Archive member included because of file (symbol)
+
+c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(atexit.o)
+                              c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o (atexit)
+c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(exit.o)
+                              c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o (exit)
+c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(impure.o)
+                              c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(exit.o) (_global_impure_ptr)
+c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+                              c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o (__libc_fini_array)
+c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(memset.o)
+                              c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o (memset)
+c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__atexit.o)
+                              c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(atexit.o) (__register_exitproc)
+c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__call_atexit.o)
+                              c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(exit.o) (__call_exitprocs)
+c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(malloc.o)
+                              c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__call_atexit.o) (free)
+c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+                              c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(malloc.o) (_malloc_r)
+c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mlock.o)
+                              c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o) (__malloc_lock)
+c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+                              c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(malloc.o) (_free_r)
+
+Allocating common symbols
+Common symbol       size              file
+
+bp_stop             0x4               .release/main.o
+state4              0x4               .release/main.o
+state               0x4               .release/main.o
+state1              0x4               .release/main.o
+state3              0x4               .release/main.o
+system_ticks        0x4               .release/main.o
+state2              0x4               .release/main.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crti.o
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crti.o
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crti.o
+ .init          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crti.o
+ .fini          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crti.o
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+ .ctors         0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+ .dtors         0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+ .eh_frame      0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+ .jcr           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+ .fini          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+ .init          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+ .text          0x00000000        0x0 .release/startup.o
+ .data          0x00000000        0x0 .release/startup.o
+ .bss           0x00000000        0x0 .release/startup.o
+ .data          0x00000000        0x0 .release/main.o
+ .bss           0x00000000        0x0 .release/main.o
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(atexit.o)
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(atexit.o)
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(atexit.o)
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(exit.o)
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(exit.o)
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(exit.o)
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(impure.o)
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(impure.o)
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(impure.o)
+ .rodata        0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(impure.o)
+ .rodata.str1.4
+                0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(impure.o)
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(memset.o)
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(memset.o)
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(memset.o)
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__atexit.o)
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__atexit.o)
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__atexit.o)
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__call_atexit.o)
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__call_atexit.o)
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__call_atexit.o)
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(malloc.o)
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(malloc.o)
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(malloc.o)
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mlock.o)
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mlock.o)
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mlock.o)
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtend.o
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtend.o
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtend.o
+ .ctors         0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtend.o
+ .dtors         0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtend.o
+ .eh_frame      0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtend.o
+ .jcr           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtend.o
+ .init          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtend.o
+ .text          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtn.o
+ .data          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtn.o
+ .bss           0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtn.o
+ .init          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtn.o
+ .fini          0x00000000        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x2c000004         0x00004000         xr
+ram              0x2c004004         0x00003000         rw
+func             0x2c007004         0x00000ffc         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crti.o
+LOAD c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+LOAD c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+LOAD .release/startup.o
+LOAD .release/main.o
+START GROUP
+LOAD c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1\libgcc.a
+LOAD c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a
+LOAD c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libc.a
+END GROUP
+LOAD c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtend.o
+LOAD c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtn.o
+
+.text           0x2c000004      0x394
+                0x2c000004                . = ALIGN (0x4)
+ CREATE_OBJECT_SYMBOLS
+ *(.startup)
+ .startup       0x2c000004       0xb0 .release/startup.o
+                0x2c000004                start_up
+ *(.text*)
+ .text          0x2c0000b4      0x2e4 .release/main.o
+                0x2c0000dc                test
+                0x2c000104                main
+ *(.gnu.warning)
+ *(.gnu.linkonce.t.*)
+ *(.init)
+ *(.glue_7)
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crti.o
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+ .glue_7        0x2c000398        0x0 .release/startup.o
+ .glue_7        0x2c000398        0x0 .release/main.o
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(atexit.o)
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(exit.o)
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(impure.o)
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(memset.o)
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__atexit.o)
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__call_atexit.o)
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(malloc.o)
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mlock.o)
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtend.o
+ .glue_7        0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtn.o
+ *(.glue_7t)
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crti.o
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+ .glue_7t       0x2c000398        0x0 .release/startup.o
+ .glue_7t       0x2c000398        0x0 .release/main.o
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(atexit.o)
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(exit.o)
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(impure.o)
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(memset.o)
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__atexit.o)
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__call_atexit.o)
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(malloc.o)
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mlock.o)
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtend.o
+ .glue_7t       0x2c000398        0x0 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtn.o
+                0x2c000398                . = ALIGN (0x4)
+
+.rodata         0x2c000398        0x0
+                0x2c000398                . = .
+ *(.rodata*)
+ *(.gnu.linkonce.r.*)
+                0x2c000398                __etext = .
+                0x2c000398                PROVIDE (__etext, .)
+
+.data           0x2c004004        0x0 load address 0x2c000398
+                0x2c004004                . = ALIGN (0x4)
+                0x2c004004                __data_start = .
+ *(.data .data.*)
+ *(.gnu.linkonce.d.*)
+                0x2c004004                . = ALIGN (0x4)
+                0x2c004004                __edata = .
+                0x2c004004                PROVIDE (__edata, .)
+
+.bss            0x2c004004       0x1c
+                0x2c004004                __bss_start = .
+                0x2c004004                __bss_start__ = .
+ *(.bss .bss.*)
+ *(.gnu.linkonce.b.*)
+ *(COMMON)
+ COMMON         0x2c004004       0x1c .release/main.o
+                0x2c004004                bp_stop
+                0x2c004008                state4
+                0x2c00400c                state
+                0x2c004010                state1
+                0x2c004014                state3
+                0x2c004018                system_ticks
+                0x2c00401c                state2
+                0x2c004020                . = ALIGN (0x4)
+                0x2c004020                __bss_end__ = .
+
+.funcarea       0x2c007004      0x1d4
+ *(.funcarea)
+ .funcarea      0x2c007004      0x1d4 .release/main.o
+                0x2c007004                cctrl_func
+                0x2c0071d8                _end = .
+                0x2c0071d8                PROVIDE (end, .)
+OUTPUT(.release/control.elf elf32-littlearm)
+
+.debug_line     0x00000000      0x1ed
+ .debug_line    0x00000000       0x49 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crti.o
+ .debug_line    0x00000049       0x9d c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+ .debug_line    0x000000e6       0x49 .release/startup.o
+ .debug_line    0x0000012f       0x75 .release/main.o
+ .debug_line    0x000001a4       0x49 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtn.o
+
+.debug_info     0x00000000     0x1002
+ .debug_info    0x00000000       0x45 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crti.o
+ .debug_info    0x00000045       0x85 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+ .debug_info    0x000000ca      0x161 .release/startup.o
+ .debug_info    0x0000022b      0xd92 .release/main.o
+ .debug_info    0x00000fbd       0x45 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtn.o
+
+.debug_abbrev   0x00000000      0x1c7
+ .debug_abbrev  0x00000000       0x10 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crti.o
+ .debug_abbrev  0x00000010       0x14 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+ .debug_abbrev  0x00000024       0x66 .release/startup.o
+ .debug_abbrev  0x0000008a      0x12d .release/main.o
+ .debug_abbrev  0x000001b7       0x10 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtn.o
+
+.debug_aranges  0x00000000       0xb8
+ .debug_aranges
+                0x00000000       0x28 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crti.o
+ .debug_aranges
+                0x00000028       0x20 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+ .debug_aranges
+                0x00000048       0x28 .release/startup.o
+ .debug_aranges
+                0x00000070       0x20 .release/main.o
+ .debug_aranges
+                0x00000090       0x28 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtn.o
+
+.comment        0x00000000      0x195
+ .comment       0x00000000       0x1b c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+ .comment       0x0000001b       0x1b .release/startup.o
+ .comment       0x00000036       0x1b .release/main.o
+ .comment       0x00000051       0x1b c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(atexit.o)
+ .comment       0x0000006c       0x1b c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(exit.o)
+ .comment       0x00000087       0x1b c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(impure.o)
+ .comment       0x000000a2       0x1b c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+ .comment       0x000000bd       0x1b c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(memset.o)
+ .comment       0x000000d8       0x1b c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__atexit.o)
+ .comment       0x000000f3       0x1b c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__call_atexit.o)
+ .comment       0x0000010e       0x1b c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(malloc.o)
+ .comment       0x00000129       0x1b c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+ .comment       0x00000144       0x1b c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mlock.o)
+ .comment       0x0000015f       0x1b c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+ .comment       0x0000017a       0x1b c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtend.o
+
+.debug_frame    0x00000000       0xa0
+ .debug_frame   0x00000000       0x30 .release/startup.o
+ .debug_frame   0x00000030       0x70 .release/main.o
+
+.debug_loc      0x00000000       0xa8
+ .debug_loc     0x00000000       0x2a .release/startup.o
+ .debug_loc     0x0000002a       0x7e .release/main.o
+
+.debug_pubnames
+                0x00000000       0xa5
+ .debug_pubnames
+                0x00000000       0x1f .release/startup.o
+ .debug_pubnames
+                0x0000001f       0x86 .release/main.o
+
+.debug_str      0x00000000       0x24
+ .debug_str     0x00000000       0x12 .release/startup.o
+ .debug_str     0x00000012       0x12 .release/main.o
+
+Cross Reference Table
+
+Symbol                                            File
+_Jv_RegisterClasses                               c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+__bss_end__                                       .release/startup.o
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+__bss_start__                                     .release/startup.o
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+__call_exitprocs                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__call_atexit.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(exit.o)
+__data_start                                      .release/startup.o
+__deregister_frame_info                           c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+__dso_handle                                      c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+__edata                                           .release/startup.o
+__etext                                           .release/startup.o
+__fini_array_end                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+__fini_array_start                                c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+__init_array_end                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+__init_array_start                                c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+__libc_fini_array                                 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+__libc_init_array                                 c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+__malloc_av_                                      c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+__malloc_current_mallinfo                         c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+__malloc_lock                                     c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mlock.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+__malloc_max_sbrked_mem                           c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+__malloc_max_total_mem                            c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+__malloc_sbrk_base                                c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+__malloc_top_pad                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+__malloc_trim_threshold                           c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+__malloc_unlock                                   c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mlock.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+__preinit_array_end                               c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+__preinit_array_start                             c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+__register_exitproc                               c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__atexit.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(atexit.o)
+__register_frame_info                             c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crtbegin.o
+__stack                                           c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+_exit                                             c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(exit.o)
+_fini                                             c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crti.o
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+_free_r                                           c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(malloc.o)
+_global_impure_ptr                                c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(impure.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__call_atexit.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__atexit.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(exit.o)
+_impure_ptr                                       c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(impure.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(malloc.o)
+_init                                             c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/crti.o
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(init.o)
+_mainCRTStartup                                   c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+_malloc_r                                         c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(malloc.o)
+_malloc_trim_r                                    c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+_sbrk_r                                           c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(freer.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(mallocr.o)
+_start                                            c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+atexit                                            c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(atexit.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+bp_stop                                           .release/main.o
+cctrl_func                                        .release/main.o
+exit                                              c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(exit.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+free                                              c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(malloc.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__call_atexit.o)
+hardware_init_hook                                c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+main                                              .release/main.o
+                                                  .release/startup.o
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+malloc                                            c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(malloc.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(__atexit.o)
+memset                                            c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib\libg.a(memset.o)
+                                                  c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+software_init_hook                                c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+start                                             c:/program files/eclipse_4/compiler/winarm/bin/../lib/gcc/arm-elf/4.1.1/../../../../arm-elf/lib/crt0.o
+start_up                                          .release/startup.o
+state                                             .release/main.o
+state1                                            .release/main.o
+state2                                            .release/main.o
+state3                                            .release/main.o
+state4                                            .release/main.o
+system_ticks                                      .release/main.o
+test                                              .release/main.o

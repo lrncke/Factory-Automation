@@ -1,0 +1,32 @@
+
+**** Build of configuration release for project BACnet ****
+
+D:\Programme\Control_III_v7.00\eclipse_control\Compiler\msys32\usr\bin\sh -c export PATH=../../Compiler/msys32/usr/bin/:$PATH ;make -sf bacnet.mak DEBUG=1 all 
+ -----------------------
+  control -- Release  
+ -----------------------
+ 
+
+writing control.bin ...
+
+.bacnet/control.elf  :
+section            size        addr
+.text               448   134217728
+.rodata               0   134218176
+.data                 0   134218176
+.bss                  4   134218176
+.funcarea           536   134246400
+.debug_info        8812           0
+.debug_abbrev      1239           0
+.debug_loc         1095           0
+.debug_aranges      136           0
+.debug_ranges        88           0
+.debug_line         650           0
+.debug_str         2059           0
+.comment             48           0
+.ARM.attributes      53           0
+.debug_frame        260           0
+Total             15428
+
+
+

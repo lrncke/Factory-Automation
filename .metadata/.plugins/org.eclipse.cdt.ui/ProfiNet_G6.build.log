@@ -1,0 +1,12 @@
+
+**** Build of configuration clean for project ProfiNet_G6 ****
+
+E:\eclipse_control\Compiler\msys32\usr\bin\sh -c export PATH=../../Compiler/msys32/usr/bin:$PATH ;make -sf pnio.mak clean all 
+ -----------------------
+  control -- Release  
+ -----------------------
+ 
+
+cleaning up ...
+
+cleaning done ...

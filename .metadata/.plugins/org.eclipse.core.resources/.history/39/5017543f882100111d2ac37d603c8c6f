@@ -1,0 +1,158 @@
+
+/*-------------------------------------------------------------------*
+ *                                                                   *
+ *                       Bihl+Wiedemann GmbH                         *
+ *                                                                   *
+ *                                                                   *
+ *       project: Control_III program                                *
+ *   module name: main.c                                             *
+ *        author: Christian Sommerfeld                               *
+ *          date: 2011-11-18                                         *
+ *                                                                   *
+ *      RCS info:                                                    *
+ *         $Date:
+ *     $Revision:
+ */
+/*! \file
+ *	\brief	
+ *
+ */
+/*                                                                   *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  include files                                                    *
+ *-------------------------------------------------------------------*/
+#include "control.h"
+#include "string.h"
+#include "control_io.h"
+
+/*-------------------------------------------------------------------*
+ *  local definitions                                                *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  external declarations                                            *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  public data                                                      *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  private data                                                     *
+ *-------------------------------------------------------------------*/
+
+
+static unsigned short system_ticks;
+static unsigned short end_timer;
+static cctrl_disp_t spon_msg;
+
+/*-------------------------------------------------------------------*
+ *  private functions                                                *
+ *-------------------------------------------------------------------*/
+
+static void timer_function ( void )
+{
+	/* timer interrupt every 10 ms */
+	system_ticks++;
+}
+
+
+/*-------------------------------------------------------------------*
+ *  public functions                                                 *
+ *-------------------------------------------------------------------*/
+
+int main ( void )
+{
+	//initialization of the Debugger
+	cctrl_func.CCtrlBreakpoint();
+
+	unsigned char		ctrl_flags;
+	int 				i=0;
+	int marker = 1;
+	volatile double rechen = 1234;
+	volatile double teiler = 23;
+	volatile double test;
+
+
+	AASiProcessData 	odi[2];
+	AASiProcessData 	idi[2];
+	AASiCtrlAccODI 		acc_odi;
+	AASiEcFlags 		ecflags;
+	AASiSlaveList		lps_test;
+
+	/* We want to access all odis */
+	for (i=0;i<32;i++)
+	{
+		acc_odi[i] = 0xFF;	
+	}
+	cctrl_func.AASiWriteCtrlAccODI ( 0, acc_odi, 0, 64 );
+
+
+	/* init timer function with 10ms ticks */
+    cctrl_func.CCtrlInitTimer ( 10, timer_function );
+
+    /* init watchdog */
+	//cctrl_func.CCtrlInitWdg( 10 );
+
+	// Display Task
+	spon_msg.show = !0;
+	spon_msg.time = 10000;
+	spon_msg.type = CCTRL_DISP_TYP_4LINES;
+
+	memcpy( spon_msg.lines[0], "LED State       ", 16);
+	memcpy( spon_msg.lines[1], "                ", 16);
+	memcpy( spon_msg.lines[2], " L1  L2  L3  L4 ", 16);
+	memcpy( spon_msg.lines[3], " o   o   o   o  ", 16);
+	cctrl_func.CCtrlDisplay( CCTRL_DISP_MODE_TRADITIONAL, spon_msg );
+
+
+	for(;;)
+	{
+		/* trigger watchdog */
+		//cctrl_func.CCtrlTriggerWdg();
+
+		 /* Define data exchange for AS-i Circuit 1 and 2*/
+		 cctrl_func.AASiDataExchange(0, odi[0], idi[0], &ecflags);
+		 cctrl_func.AASiDataExchange(1, odi[1], idi[1], &ecflags);
+
+		//Timer 1 100 * 10ms = 1sec.
+		if ( ((unsigned short)(system_ticks - end_timer)) > 1500)
+		{
+			if (i = 0){
+				cctrl_func.AASiSetConfigMode(0,1);
+				i = 1;
+			}
+			else {
+				cctrl_func.AASiSetConfigMode(0,0);
+				i = 0;
+			}
+
+			end_timer = system_ticks;
+		}
+
+		//test = read_bit(idi[0], 12, 3);
+		write_bit(odi[0], 12, 4 , test);
+
+
+		cctrl_func.AASiReadLPF(0, &lps_test);
+
+		/* to check Cycletime */
+		cctrl_func.CCtrlEvalCycletime();
+
+		/*read flags if we should stop control*/
+		cctrl_func.CCtrlReadFlags( &ctrl_flags );
+		if ( !( ctrl_flags & CCTRL_FLAG_RUN ) )
+		{
+			return 1;
+		}
+	
+	}
+}
+/*-------------------------------------------------------------------*
+ *  eof                                                              *
+ *-------------------------------------------------------------------*/
+
+
+

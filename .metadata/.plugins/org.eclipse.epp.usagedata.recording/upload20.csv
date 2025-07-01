@@ -1,0 +1,276 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.VariableView",1298625739944
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1298625744605
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1298625744638
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1298625760047
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298625772127
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1298625786830
+executed,command,,,"AUTOGEN:::org.eclipse.cdt.debug.ui.CEditor.BreakpointRulerActions/org.eclipse.cdt.debug.ui.CEditor.RulerTobbleBreakpointAction",1298625793447
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298625796512
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.BreakpointView",1298625809392
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298625817016
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298625818607
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.VariableView",1298625819816
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1298625820578
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Terminate",1298625820637
+error,log,,,"Inferior terminated",1298625820673
+error,log,,,"Inferior terminated",1298625820674
+error,log,,,"Inferior terminated",1298625820675
+error,log,,,"Inferior terminated",1298625820675
+error,log,,,"Inferior terminated",1298625820676
+error,log,,,"Inferior terminated",1298625820677
+error,log,,,"Inferior terminated",1298625820677
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1298625820712
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298625820716
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298625820719
+closed,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1298625820730
+activated,perspective,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.CPerspective",1298625825756
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298625825761
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298625828095
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298625863017
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1298625869697
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298625871799
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298626823778
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298626825843
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298626828566
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298626876511
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298626909006
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298626912179
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298626979734
+activated,perspective,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugPerspective",1298626984119
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298626984124
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298626992685
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1298626996318
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1298626998143
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627007962
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627010017
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627012030
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627014515
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627018287
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1298627018422
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298627018441
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298627018459
+opened,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1298627018498
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627025208
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627040455
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1298627042895
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1298627042947
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.BreakpointView",1298627054451
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.VariableView",1298627056115
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1298627062364
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Terminate",1298627062425
+error,log,,,"Inferior terminated",1298627062439
+error,log,,,"Inferior terminated",1298627062440
+error,log,,,"Inferior terminated",1298627062440
+error,log,,,"Inferior terminated",1298627062443
+error,log,,,"Inferior terminated",1298627062446
+error,log,,,"Inferior terminated",1298627062446
+error,log,,,"Inferior terminated",1298627062447
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627086377
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627154551
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298627156981
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1298627165450
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298627165456
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298627165461
+activated,perspective,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.CPerspective",1298627165504
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298627165510
+activated,perspective,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugPerspective",1298627182519
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298627182525
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1298627182618
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298627182637
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298627182655
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1298627205304
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1298627206111
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627218892
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627221689
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1298627226818
+started,bundle,org.eclipse.compare,3.5.100.I20100526-0800,"org.eclipse.compare",1298627227017
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627240331
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627373804
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298627375253
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627407668
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627412387
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627426252
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627427712
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1298627473163
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Terminate",1298627473219
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298627479709
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627484249
+error,log,,,"{R,T}xThread terminated",1298627486334
+error,log,,,"{R,T}xThread terminated",1298627486334
+error,log,,,"{R,T}xThread terminated",1298627486335
+error,log,,,"{R,T}xThread terminated",1298627486335
+error,log,,,"{R,T}xThread terminated",1298627486336
+error,log,,,"{R,T}xThread terminated",1298627486337
+error,log,,,"{R,T}xThread terminated",1298627486337
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627486452
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627489604
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627490615
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627490936
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627493507
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1298627495268
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298627495274
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298627495279
+activated,perspective,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.CPerspective",1298627495322
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298627495327
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627519995
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627525069
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1298627526709
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298627526729
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298627526745
+activated,perspective,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugPerspective",1298627526768
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298627526774
+activated,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1298627541957
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1298627542011
+closed,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1298627542011
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1298627545512
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1298627545559
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627546210
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627548194
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Terminate",1298627549450
+error,log,,,"Inferior terminated",1298627549473
+error,log,,,"Inferior terminated",1298627549475
+error,log,,,"Inferior terminated",1298627549477
+error,log,,,"Inferior terminated",1298627549478
+error,log,,,"Inferior terminated",1298627549479
+error,log,,,"Inferior terminated",1298627549481
+error,log,,,"Inferior terminated",1298627549482
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1298627589602
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298627589608
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298627589613
+activated,perspective,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.CPerspective",1298627589658
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298627589663
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627597749
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627610886
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627734656
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627736796
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627743125
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298627749836
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628041720
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628041861
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1298628043034
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1298628085696
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628090205
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628092104
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1298628137432
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1298628150694
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628176684
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628181725
+activated,perspective,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugPerspective",1298628204047
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628257609
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628631527
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628637363
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628639367
+activated,perspective,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.CPerspective",1298628639455
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628640691
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628641326
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628642116
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628676671
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628700053
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628701444
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628740612
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628745422
+activated,perspective,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugPerspective",1298628745490
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1298628745574
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298628745596
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298628745617
+opened,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1298628745658
+activated,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1298628745674
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1298628755528
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1298628758638
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1298628758695
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628759352
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628763745
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.BreakpointView",1298628775350
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1298628782457
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Terminate",1298628782512
+error,log,,,"Inferior terminated",1298628782531
+error,log,,,"Inferior terminated",1298628782532
+error,log,,,"Inferior terminated",1298628782532
+error,log,,,"Inferior terminated",1298628782533
+error,log,,,"Inferior terminated",1298628782534
+error,log,,,"Inferior terminated",1298628782535
+error,log,,,"Inferior terminated",1298628782535
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1298628798373
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298628798379
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298628798384
+activated,perspective,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.CPerspective",1298628798445
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298628798451
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628799604
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628800936
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628803359
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628806579
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1298628856152
+activated,perspective,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugPerspective",1298628858113
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1298628870999
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298628871022
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298628871040
+activated,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1298628871092
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1298628874504
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1298628880710
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1298628880767
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628896131
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628897963
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298628905536
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298629207326
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Terminate",1298629209808
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298629211054
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298629216131
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298629220778
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1298629222626
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298629222633
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298629222638
+activated,perspective,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.CPerspective",1298629222687
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298629222692
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298629233593
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298629234398
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298629234964
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298629240121
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298629270428
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298629358391
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1298629360923
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298629362931
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298629411375
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298629774875
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298629777563
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298629780092
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298630085711
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298630086817
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298630239571
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298630324420
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298630325376
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298630326946
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298630714240
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298630747569
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298630916915
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298630944504
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298631406817
+activated,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1298631437228
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1298631438139
+closed,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1298631438139
+activated,perspective,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugPerspective",1298631495160
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1298631495246
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298631495265
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298631495284
+opened,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1298631495318
+activated,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1298631495332
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1298631502438
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1298631502487
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298631641101
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298633915905
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298633943178
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1298634318040
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Terminate",1298634320434
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1298634328662
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298634328670
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298634328675
+activated,perspective,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.CPerspective",1298634328734
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298634328739
+activated,perspective,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugPerspective",1298634409472
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1298634409477
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1298634409569
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1298634409590
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1298634409609
+activated,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1298634442070
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1298634442138
+closed,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1298634442138

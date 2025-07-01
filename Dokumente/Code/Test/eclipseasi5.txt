@@ -1,0 +1,132 @@
+/*-------------------------------------------------------------------*
+ *                                                                   *
+ *                       Bihl+Wiedemann GmbH                         *
+ *                                                                   *
+ *                                                                   *
+ *       project: Control_III                                        *
+ *   module name: main.c                                             *
+ *        author: Christian Sommerfeld                               *
+ *          date: 2015-02-26                                         *
+ *                                                                   *
+ *  version: 1.0 first version                                       *
+ *                                                                   *
+ *                                                                   *              
+                                                 *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  include files                                                    *
+ *-------------------------------------------------------------------*/
+#include "control.h"
+#include <string.h>
+#include "control_io.h"
+#include "enet.h"
+#include "test.h"
+
+/*-------------------------------------------------------------------*
+ *  local definitions                                                *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  external declarations                                            *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  public data                                                      *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  private data                                                     *
+ *-------------------------------------------------------------------*/
+
+static unsigned short system_ticks;
+static unsigned short end_timer;
+
+/*-------------------------------------------------------------------*
+ *  private functions                                                *
+ *-------------------------------------------------------------------*/
+
+static void timer_function ( void )
+{
+        /* timer interrupt every 10 ms */
+        system_ticks++;
+}
+
+/*-------------------------------------------------------------------*
+ *  public functions                                                 *
+ *-------------------------------------------------------------------*/
+
+int main ( void )
+{
+        //initialization of the Debugger
+        //cctrl_func.CCtrlBreakpoint();
+
+        unsigned char                ctrl_flags;
+        unsigned char                asi5_accodi[2];
+        unsigned char                asi5_odi[2];
+        int                                 i = 0;
+
+        AASiProcessData         odi[2];
+        AASiProcessData         idi[2];
+        AASiCtrlAccODI                 acc_odi;
+        AASiEcFlags                 ecflags;
+
+        /* We want to access all ASi-3 odis */
+        for (i=0;i<32;i++)
+        {
+                acc_odi[i] = 0xFF;        
+        }
+        cctrl_func.AASiWriteCtrlAccODI ( 0, acc_odi, 0, 64 );
+
+        /* Access ASi5 logical Slave 1+2 (1 Byte / Slave) */
+        asi5_accodi[0] = 0xFF;
+        asi5_accodi[1] = 0xFF;
+        cctrl_func.Asi5WriteCtrlAccODI(0, asi5_accodi, 2, 1);
+
+        //clean all odis
+        for (i=0;i<32;i++)
+        {
+                odi[0][i] = 0x00;
+        }
+
+        /* init timer function with 10ms ticks */
+    cctrl_func.CCtrlInitTimer ( 1, timer_function );
+
+    /* init watchdog */
+        //cctrl_func.CCtrlInitWdg( 10 );
+
+    asi5_odi[0] = 0x11;
+    asi5_odi[1] = 0x12;
+
+        for(;;)
+        {
+
+                /* trigger watchdog */
+                //cctrl_func.CCtrlTriggerWdg();
+
+                /* Define data exchange for AS-i Circuit 1 and 2*/
+                cctrl_func.AASiDataExchange(0, odi[0], idi[0], &ecflags);
+                cctrl_func.AASiDataExchange(1, odi[1], idi[1], &ecflags);
+
+                //Timer 1 100 * 10ms = 1sec.
+                if ( ((unsigned short)(system_ticks - end_timer)) > 100)
+                {
+                        end_timer = system_ticks;
+                        cctrl_func.Asi5WriteASi5Odi(0, &asi5_odi[0], 2, 1);
+                }
+
+                /* to check Cycletime */
+                cctrl_func.CCtrlEvalCycletime();
+
+                /*read flags if we should stop control*/
+                cctrl_func.CCtrlReadFlags( &ctrl_flags );
+                if ( !( ctrl_flags & CCTRL_FLAG_RUN ) )
+                {
+                        return 1;
+                }
+        
+        }
+}
+/*-------------------------------------------------------------------*
+ *  eof                                                              *
+ *-------------------------------------------------------------------*/

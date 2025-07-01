@@ -1,0 +1,60 @@
+#---------------------------------------------------------------------#
+#                                                                     #
+#                        Bihl+Wiedemann GmbH                          #
+#                                                                     #
+#                                                                     #
+#        project: Control III                                         #
+#    module name: setting.mak                                         #
+#         author: Christian Sommerfeld                                #
+#           date: 2011-08-01                                          #
+#                                                                     #
+#       VCS info:                                                     #
+#          $Date: 2011/08/01 16:57:26 $
+#      $Revision: 1.0 $
+#                                                                     #
+#    description:                                                     #
+#                                                                     #
+#                                                                     #
+#---------------------------------------------------------------------#
+##### ###### ##### ######
+#  ## ##  ## #  ##   ##
+##### ##  ## #####   ##
+##    ##  ## # #     ##
+##    ###### #  #    ##
+
+
+#+++ Einstellung Port +++
+#Beispiel: COM1, COM2, UDP:192.168.42.129
+
+PORT=udp:192.168.42.129
+
+
+	DUMMY:=$(shell echo -en "" \
+			"-----------------------\n" \
+			" ++++ CONTROL III ++++ \n" \
+			"-----------------------\n" \
+			"\n" \
+			>&2)
+
+CTRL= ../../Compiler/Tools/bwctrl.exe
+			
+			
+.PHONY: download_ctrl
+download_ctrl:
+	$(CTRL) "port $(PORT); ctrl dn control.bin; exit"
+
+.PHONY: start_ctrl
+start_ctrl: 
+	$(CTRL) "port $(PORT); ctrl wrflags 1; exit"
+
+.PHONY: stop_ctrl
+stop_ctrl: 
+	$(CTRL) "port $(PORT); ctrl wrflags 0; exit"
+	
+.PHONY: zykluszeit_ctrl
+zykluszeit_ctrl: 
+	$(CTRL) "port $(PORT); ctrl ct; exit"		
+
+.PHONY: auto_start_ctrl
+auto_start_ctrl:
+	$(CTRL) "port $(PORT); ctrl wrflags 0x09; exit"	

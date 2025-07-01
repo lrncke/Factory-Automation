@@ -1,0 +1,326 @@
+what,kind,bundleId,bundleVersion,description,time
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1305027305744
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1305027305774
+opened,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1305027305924
+activated,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1305027305944
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1305027314690
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1305027319467
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027344908
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305027351063
+error,log,,,"Internal error logged from CDI Debug: ",1305027351068
+error,log,,,"Internal error logged from CDI Debug: ",1305027351069
+error,log,,,"Internal error logged from CDI Debug: ",1305027351070
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1305027351254
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1305027351262
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1305027351268
+closed,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1305027351355
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027352415
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027360601
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027361601
+activated,perspective,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.CPerspective",1305027375178
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1305027375190
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027382108
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027383129
+activated,perspective,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugPerspective",1305027408099
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1305027408168
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1305027408188
+opened,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1305027408209
+opened,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1305027408255
+activated,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1305027408268
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1305027414316
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1305027421673
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1305027421720
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1305027426705
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1305027430825
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1305027434217
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Terminate",1305027442946
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Terminate",1305027465706
+closed,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1305027591091
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027609693
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027633893
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.MemoryView",1305027634291
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.RegisterView",1305027634297
+closed,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.ModuleView",1305027634302
+activated,perspective,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.CPerspective",1305027634333
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1305027634346
+error,log,,,"Error",1305027637845
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027637861
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027639596
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027643469
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027665384
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027667364
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027683502
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027684164
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027685141
+failed,command,org.eclipse.ui.externaltools,3.2.0.v20100427,"org.eclipse.ui.externalTools.commands.OpenExternalToolsConfigurations",1305027685168
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305027689356
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305028041201
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305028057972
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305028203960
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305028224602
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305028615422
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305028642340
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029124552
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029128516
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029129240
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029147566
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029164104
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029174013
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305029177059
+error,log,,,"Internal error logged from CDI Debug: ",1305029177063
+error,log,,,"Internal error logged from CDI Debug: ",1305029177064
+error,log,,,"Internal error logged from CDI Debug: ",1305029177065
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029178089
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029182896
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029182930
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029182950
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029184236
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029189885
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029493897
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029499415
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029500608
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029516262
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029703184
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029706316
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029708287
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029715158
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029736327
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305029737180
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030051071
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030052573
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030215650
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030217269
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030227166
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030238156
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030249122
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030253868
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030357834
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030363445
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030366848
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030385932
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305030388879
+error,log,,,"Internal error logged from CDI Debug: ",1305030388885
+error,log,,,"Internal error logged from CDI Debug: ",1305030388887
+error,log,,,"Internal error logged from CDI Debug: ",1305030388889
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305030391548
+error,log,,,"Internal error logged from CDI Debug: ",1305030391552
+error,log,,,"Internal error logged from CDI Debug: ",1305030391553
+error,log,,,"Internal error logged from CDI Debug: ",1305030391554
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305030394381
+error,log,,,"Internal error logged from CDI Debug: ",1305030394385
+error,log,,,"Internal error logged from CDI Debug: ",1305030394386
+error,log,,,"Internal error logged from CDI Debug: ",1305030394386
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305030397832
+error,log,,,"Internal error logged from CDI Debug: ",1305030397838
+error,log,,,"Internal error logged from CDI Debug: ",1305030397840
+error,log,,,"Internal error logged from CDI Debug: ",1305030397841
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030400419
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030402605
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030404704
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030420470
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030894848
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030906568
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030938959
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305030950022
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305031585680
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305031587949
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305031590080
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305031607993
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305031644353
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305031644989
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305031649814
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305031650428
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305031923785
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305031928888
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305031930776
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305031946423
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305031986545
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305031988047
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305033170576
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305033171246
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305033171989
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305033173868
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305033175692
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305033179682
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305036310156
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305036315562
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305040413708
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305040414316
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305041469737
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305041472044
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305041475820
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305041480963
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305041552441
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305041553205
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305041819598
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305041820397
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305041904302
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305041920455
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305041931816
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305041932602
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305042117104
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305042117932
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305100024817
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305100025504
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305100926648
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305100930394
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305100941082
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305100952348
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305100955189
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305100965056
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305100971575
+error,log,,,"Internal error logged from CDI Debug: ",1305100971642
+error,log,,,"Internal error logged from CDI Debug: ",1305100971644
+error,log,,,"Internal error logged from CDI Debug: ",1305100971645
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305100974588
+error,log,,,"Internal error logged from CDI Debug: ",1305100974593
+error,log,,,"Internal error logged from CDI Debug: ",1305100974594
+error,log,,,"Internal error logged from CDI Debug: ",1305100974594
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305100977323
+error,log,,,"Internal error logged from CDI Debug: ",1305100977329
+error,log,,,"Internal error logged from CDI Debug: ",1305100977330
+error,log,,,"Internal error logged from CDI Debug: ",1305100977332
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305100980508
+error,log,,,"Internal error logged from CDI Debug: ",1305100980514
+error,log,,,"Internal error logged from CDI Debug: ",1305100980516
+error,log,,,"Internal error logged from CDI Debug: ",1305100980518
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305100983215
+error,log,,,"Internal error logged from CDI Debug: ",1305100983219
+error,log,,,"Internal error logged from CDI Debug: ",1305100983220
+error,log,,,"Internal error logged from CDI Debug: ",1305100983221
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305100985816
+error,log,,,"Internal error logged from CDI Debug: ",1305100985823
+error,log,,,"Internal error logged from CDI Debug: ",1305100985825
+error,log,,,"Internal error logged from CDI Debug: ",1305100985827
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305101026287
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305101034870
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305104199330
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305104200112
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305104206263
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305104211634
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305104217093
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305104226874
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305104299277
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305104319463
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305104447884
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305104448816
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305104614558
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305104660361
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305104663369
+error,log,,,"Internal error logged from CDI Debug: ",1305104663373
+error,log,,,"Internal error logged from CDI Debug: ",1305104663374
+error,log,,,"Internal error logged from CDI Debug: ",1305104663375
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305104666353
+error,log,,,"Internal error logged from CDI Debug: ",1305104666390
+error,log,,,"Internal error logged from CDI Debug: ",1305104666391
+error,log,,,"Internal error logged from CDI Debug: ",1305104666392
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305104667462
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305104669805
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305106318460
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305106341635
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305107812596
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305107813824
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305107827924
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305107831264
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305107834134
+error,log,,,"Internal error logged from CDI Debug: ",1305107834142
+error,log,,,"Internal error logged from CDI Debug: ",1305107834144
+error,log,,,"Internal error logged from CDI Debug: ",1305107834146
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305107834998
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305107841876
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305107846282
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305107854940
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305111725246
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305111726177
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305112166232
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305112166698
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305112664647
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305112665288
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305112758001
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305112758770
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305112845898
+error,log,,,"Internal error logged from CDI Debug: ",1305112845902
+error,log,,,"Internal error logged from CDI Debug: ",1305112845903
+error,log,,,"Internal error logged from CDI Debug: ",1305112845904
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305112921526
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305112923416
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305112929284
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305112939202
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305112941749
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305112948573
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305113497189
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305113501889
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305113504844
+error,log,,,"Internal error logged from CDI Debug: ",1305113504847
+error,log,,,"Internal error logged from CDI Debug: ",1305113504848
+error,log,,,"Internal error logged from CDI Debug: ",1305113504849
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305113505935
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305113510555
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305113513109
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305113520505
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305113563141
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305113564273
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305113567300
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305113578022
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305113580789
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305113585085
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305113858480
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305113860905
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114181478
+executed,command,org.eclipse.ui.externaltools,3.2.0.v20100427,"org.eclipse.ui.externaltools.ExternalToolMenuDelegateToolbar",1305114182841
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114192727
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305114195808
+error,log,,,"Internal error logged from CDI Debug: ",1305114195815
+error,log,,,"Internal error logged from CDI Debug: ",1305114195816
+error,log,,,"Internal error logged from CDI Debug: ",1305114195818
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305114198207
+error,log,,,"Internal error logged from CDI Debug: ",1305114198210
+error,log,,,"Internal error logged from CDI Debug: ",1305114198210
+error,log,,,"Internal error logged from CDI Debug: ",1305114198211
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114199119
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114212204
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114232053
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114235820
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114243073
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114246805
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114290964
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114298535
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114301053
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114309006
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114357732
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114359403
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305114362469
+error,log,,,"Internal error logged from CDI Debug: ",1305114362475
+error,log,,,"Internal error logged from CDI Debug: ",1305114362477
+error,log,,,"Internal error logged from CDI Debug: ",1305114362479
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305114365578
+error,log,,,"Internal error logged from CDI Debug: ",1305114365597
+error,log,,,"Internal error logged from CDI Debug: ",1305114365599
+error,log,,,"Internal error logged from CDI Debug: ",1305114365600
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305114368904
+error,log,,,"Internal error logged from CDI Debug: ",1305114368910
+error,log,,,"Internal error logged from CDI Debug: ",1305114368912
+error,log,,,"Internal error logged from CDI Debug: ",1305114368914
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114370321
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114385542
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114389533
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114394908
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114452641
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114453852
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114485325
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114486097
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114486767
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114488385
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114490311
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114491667
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114724381
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114725490
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114728709
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114741126
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114743436
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1305114748314
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305114760632
+error,log,,,"Internal error logged from CDI Debug: ",1305114760638
+error,log,,,"Internal error logged from CDI Debug: ",1305114760640
+error,log,,,"Internal error logged from CDI Debug: ",1305114760641
+error,log,,,"Failed command: target remote UDP:192.168.42.176",1305114763054

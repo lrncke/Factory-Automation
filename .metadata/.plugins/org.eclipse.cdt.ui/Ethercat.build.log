@@ -1,0 +1,12 @@
+
+**** Build of configuration clean for project Ethercat ****
+
+C:\Users\csommerfeld\Desktop\eclipse_control\Compiler\msys32\usr\bin\sh -c export PATH=../../Compiler/msys32/usr/bin:$PATH ;make -sf ecat.mak clean all 
+ -----------------------
+  control -- Release  
+ -----------------------
+ 
+
+cleaning up ...
+
+cleaning done ...

@@ -1,0 +1,151 @@
+/*-------------------------------------------------------------------*
+ *                                                                   *
+ *                       Bihl+Wiedemann GmbH                         *
+ *                                                                   *
+ *                                                                   *
+ *       project: C-control program                                  *
+ *   Sample name: 			                                         *
+ *        author: 				                                     *
+ *          date: 			                                         *
+ *                                                                   *
+ *      RCS info:                                                    *
+ *         $Date: 2009/10/21 12:37:52 $
+ *     $Revision: 1.1.2.1.2.2 $
+ */
+/*! \file
+ *	\brief	
+ *
+ */
+/*                                                                   *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  include files                                                    *
+ *-------------------------------------------------------------------*/
+//#include "string.h"
+#include "control.h"
+#include "control_io.h"
+/*-------------------------------------------------------------------*
+ *  local definitions                                                *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  public data                                                      *
+ *-------------------------------------------------------------------*/
+
+volatile ccontrol_func_t cctrl_func __attribute__ ((__section__ (".funcarea")));
+
+/*-------------------------------------------------------------------*
+ *  private data                                                     *
+ *-------------------------------------------------------------------*/
+volatile unsigned int system_ticks;
+volatile unsigned int 		state;
+volatile unsigned int 		state1;
+volatile unsigned int 		state2;
+volatile unsigned int 		state3;
+volatile unsigned int 		state4;
+int bp_stop;
+
+AASiProcessData 	odi[2];
+AASiProcessData 	idi[2];
+/*-------------------------------------------------------------------*
+ *  private functions                                                *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  public functions                                                 *
+ *-------------------------------------------------------------------*/
+
+static void timer_function ( void )
+{
+	/* timer interrupt every 10 ms */
+	
+	system_ticks++;
+}
+
+int main()
+{
+	//to initialize the GDB and the breakpoints
+	cctrl_func.CCtrlBreakpoint();
+
+	//unsigned int test_out;
+	unsigned int timer_1;
+	unsigned char flags;
+	int bit_wert;
+	int test = 0;
+	int write = 1;
+
+	AASiCtrlAccODI acc_odi;
+
+	AASiEcFlags     	ecflags;
+
+
+    /* init timer function with 10 ms ticks */
+    cctrl_func.CCtrlInitTimer(10, timer_function);
+
+	timer_1 = system_ticks;
+	state = 1;	
+
+	//cctrl_func.CCtrlDelay(2000);
+
+	acc_odi[0] = 0x0F;
+	cctrl_func.AASiWriteCtrlAccODI(0, acc_odi, 11, 1);
+	cctrl_func.AASiWriteCtrlAccODI(0, acc_odi, 1, 1);
+
+	for(;;)
+    {
+
+		 cctrl_func.AASiDataExchange(0, odi[0], idi[0], &ecflags);	// Define data exchange für AS-i Kreis 1
+
+		 cctrl_func.AASiDataExchange(1, odi[1], idi[1], &ecflags);	// Define data exchange für AS-i Kreis 2
+
+	 	//cctrl_func.CCtrlTriggerWdg();
+		 if (bp_stop != 5) 
+		 {
+			 state++;
+		 }
+		 //cctrl_func.CCtrlDelay(2000);
+
+		 bit_wert = read_bit(idi[0], 28, 1);
+
+
+		 if (test > 3)
+		 {
+			 test=0;
+			 if (write == 0) write = 1;
+			 else write = 0;
+		 }
+		 write_bit(odi[0], 11, test, write);
+		 test++;
+		 cctrl_func.CCtrlDelay(500);
+
+
+		 state1++;
+		 state2++;
+		 state3++;
+		 state4++;
+
+		 write_bit(odi[0], 1, 0, 1);
+
+
+		// read flags to check if we should stop control
+		cctrl_func.CCtrlReadFlags( &flags );
+
+		cctrl_func.CCtrlEvalCycletime();
+
+
+
+		if ( !( flags & CCTRL_FLAG_RUN ) )
+		{
+			return 1;
+		}
+
+	} // for (;;)  
+
+	return 0;
+}
+
+/*-------------------------------------------------------------------*
+ *  eof                                                              *
+ *-------------------------------------------------------------------*/
+

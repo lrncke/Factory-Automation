@@ -1,0 +1,30 @@
+#include "control.h"
+#include "string.h"
+#include "control_io.h"
+#include "enet.h"
+
+#define CIRCUIT       0
+#define SLAVE_ADDR    0x01     // Logische Adresse des BWU3163
+
+static unsigned short system_ticks = 0;
+static unsigned short end_timer = 0;
+
+unsigned char asi5_odi[1];
+unsigned char acc5odi = 0xFF;
+
+
+static void timer_function(void)
+{
+    system_ticks++;  // alle 10 ms
+}
+
+int main(void)
+{
+	cctrl_func.Asi5WriteCtrlAccODI(0,&acc5odi,1,1);
+	asi5_odi[0] = 0xFF;
+	cctrl_func.Asi5WriteASi5Odi(0,&asi5_odi[0],1,1);
+    for (;;)
+    {
+
+    }
+}

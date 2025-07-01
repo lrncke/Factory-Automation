@@ -1,0 +1,57 @@
+#include "control.h"
+#include "string.h"
+#include "control_io.h"
+#include "enet.h"
+
+#define CIRCUIT       0
+#define SLAVE_ADDR    0x01     // Logische Adresse des BWU3163
+#define PI_BYTE       0b00000011  // Watchdog + Filter aktiv
+
+static unsigned short system_ticks = 0;
+static unsigned short end_timer = 0;
+
+static void timer_function(void)
+{
+    system_ticks++;  // alle 10 ms
+}
+
+int main(void)
+{
+    cctrl_func.CCtrlBreakpoint();  // Debugger-Stopp
+
+    unsigned char ctrl_flags;
+    unsigned char odi = 0x00;
+    unsigned char pi = PI_BYTE;
+
+    // 1) PI setzen und speichern
+    if (cctrl_func.Asi5SetParameters(CIRCUIT, SLAVE_ADDR, 0, 1, &pi))
+        return -1;
+    if (cctrl_func.Asi5StorePi(CIRCUIT, SLAVE_ADDR))
+        return -2;
+
+    // 2) Timer initialisieren mit 10ms Takt
+    cctrl_func.CCtrlInitTimer(10, timer_function);
+
+    // 3) Endlosschleife mit Blinken von Q1 (Bit 1)
+    for (;;)
+    {
+        // Blinken alle 500ms (50 * 10ms)
+        if ((unsigned short)(system_ticks - end_timer) > 50)
+        {
+            end_timer = system_ticks;
+
+            odi ^= 0x01;  // Bit 1 toggeln -> Q1 an/aus
+
+            if (cctrl_func.Asi5WriteASi5Odi(CIRCUIT, &odi, 1, SLAVE_ADDR))
+                return -3;
+        }
+
+        // Optional: Zykluszeit messen
+        cctrl_func.CCtrlEvalCycletime();
+
+        // Optional: STOP-Steuerung
+        cctrl_func.CCtrlReadFlags(&ctrl_flags);
+        if (!(ctrl_flags & CCTRL_FLAG_RUN))
+            return 1;
+    }
+}

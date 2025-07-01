@@ -1,0 +1,269 @@
+
+.release/control.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000001f8  20f82000  20f82000  00002000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          00000004  20f821f8  20f821f8  000021f8  2**1
+                  ALLOC
+  2 .funcarea     00000394  20f80000  20f80000  00000074  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .debug_line   00000314  00000000  00000000  000021f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   000073a4  00000000  00000000  0000250c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 0000059d  00000000  00000000  000098b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_aranges 00000110  00000000  00000000  00009e50  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  7 .comment      000001b0  00000000  00000000  00009f60  2**0
+                  CONTENTS, READONLY
+  8 .debug_frame  000000f8  00000000  00000000  0000a110  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    00000244  00000000  00000000  0000a208  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_pubnames 000000bd  00000000  00000000  0000a44c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    00002abd  00000000  00000000  0000a509  2**0
+                  CONTENTS, READONLY, DEBUGGING
+Disassembly of section .text:
+
+20f82000 <start_vector>:
+20f82000:	08 20 f8 20 0a 1a 00 00                             . . ....
+
+20f82008 <start_up>:
+
+	src = &__etext;
+	dst = &__data_start;
+
+	while (dst < &__edata)
+20f82008:	e59f3048 	ldr	r3, [pc, #72]	; 20f82058 <.text+0x58>
+20f8200c:	e59f0048 	ldr	r0, [pc, #72]	; 20f8205c <.text+0x5c>
+20f82010:	e1530000 	cmp	r3, r0
+20f82014:	2a000006 	bcs	20f82034 <start_up+0x2c>
+20f82018:	e59f1040 	ldr	r1, [pc, #64]	; 20f82060 <.text+0x60>
+20f8201c:	e1a02003 	mov	r2, r3
+	{
+		*dst = *src;
+20f82020:	e5113004 	ldr	r3, [r1, #-4]
+
+		src++;
+		dst++;
+20f82024:	e2811004 	add	r1, r1, #4	; 0x4
+20f82028:	e4823004 	str	r3, [r2], #4
+20f8202c:	e1520000 	cmp	r2, r0
+20f82030:	3afffffa 	bcc	20f82020 <start_up+0x18>
+	}
+
+	/*	initialize the 'bss' segment with zero
+	 */
+
+	dst = &__bss_start__;
+
+	while (dst < &__bss_end__)
+20f82034:	e59f3028 	ldr	r3, [pc, #40]	; 20f82064 <.text+0x64>
+20f82038:	e59f1028 	ldr	r1, [pc, #40]	; 20f82068 <.text+0x68>
+20f8203c:	e1530001 	cmp	r3, r1
+20f82040:	2a000003 	bcs	20f82054 <start_up+0x4c>
+20f82044:	e3a02000 	mov	r2, #0	; 0x0
+	{
+		*dst = 0;
+20f82048:	e4832004 	str	r2, [r3], #4
+20f8204c:	e1530001 	cmp	r3, r1
+20f82050:	3afffffc 	bcc	20f82048 <start_up+0x40>
+		dst++;
+	}
+
+	main ();
+20f82054:	ea00000a 	b	20f82084 <main>
+20f82058:	20f821f8 	ldrcssht	r2, [r8], #24
+20f8205c:	20f821f8 	ldrcssht	r2, [r8], #24
+20f82060:	20f821fc 	ldrcssht	r2, [r8], #28
+20f82064:	20f821f8 	ldrcssht	r2, [r8], #24
+20f82068:	20f821fc 	ldrcssht	r2, [r8], #28
+
+20f8206c <timer_function>:
+
+static void timer_function ( void )
+{
+	/* timer interrupt every 10 ms */
+	system_ticks++;
+20f8206c:	e59f200c 	ldr	r2, [pc, #12]	; 20f82080 <.text+0x80>
+20f82070:	e1d230b0 	ldrh	r3, [r2]
+20f82074:	e2833001 	add	r3, r3, #1	; 0x1
+20f82078:	e1c230b0 	strh	r3, [r2]
+}
+20f8207c:	e12fff1e 	bx	lr
+20f82080:	20f821f8 	ldrcssht	r2, [r8], #24
+
+20f82084 <main>:
+
+/*-------------------------------------------------------------------*
+ *  public functions                                                 *
+ *-------------------------------------------------------------------*/
+
+int main ( void )
+{
+20f82084:	e92d4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+20f82088:	e24dd0ac 	sub	sp, sp, #172	; 0xac
+20f8208c:	e3a03000 	mov	r3, #0	; 0x0
+20f82090:	e28d1083 	add	r1, sp, #131	; 0x83
+20f82094:	e3e02000 	mvn	r2, #0	; 0x0
+	//initialization of the Debugger
+	//cctrl_func.CCtrlBreakpoint();
+
+	unsigned char		ctrl_flags;
+	int 				i = 0;
+	unsigned char asi5_idi[3];
+	unsigned short len;
+
+	AASiProcessData 	odi[2];
+	AASiProcessData 	idi[2];
+	AASiCtrlAccODI 		acc_odi;
+	AASiEcFlags 		ecflags;
+
+	/* We want to access all ASi-3 odis */
+	for (i=0;i<32;i++)
+	{
+		acc_odi[i] = 0xFF;	
+20f82098:	e7c32001 	strb	r2, [r3, r1]
+20f8209c:	e2833001 	add	r3, r3, #1	; 0x1
+20f820a0:	e3530020 	cmp	r3, #32	; 0x20
+20f820a4:	1afffffb 	bne	20f82098 <main+0x14>
+	}
+	cctrl_func.AASiWriteCtrlAccODI ( 0, acc_odi, 0, 64 );
+20f820a8:	e59f5138 	ldr	r5, [pc, #312]	; 20f821e8 <.text+0x1e8>
+20f820ac:	e3a00000 	mov	r0, #0	; 0x0
+20f820b0:	e1a02000 	mov	r2, r0
+20f820b4:	e2833020 	add	r3, r3, #32	; 0x20
+20f820b8:	e595c198 	ldr	ip, [r5, #408]
+20f820bc:	e1a0e00f 	mov	lr, pc
+20f820c0:	e12fff1c 	bx	ip
+20f820c4:	e3a03000 	mov	r3, #0	; 0x0
+20f820c8:	e28d6003 	add	r6, sp, #3	; 0x3
+20f820cc:	e1a02003 	mov	r2, r3
+
+	//clean all odis
+	for (i=0;i<32;i++)
+	{
+		odi[0][i] = 0x00;
+20f820d0:	e7c32006 	strb	r2, [r3, r6]
+20f820d4:	e2833001 	add	r3, r3, #1	; 0x1
+20f820d8:	e3530020 	cmp	r3, #32	; 0x20
+20f820dc:	1afffffb 	bne	20f820d0 <main+0x4c>
+	}
+
+	/* init timer function with 10ms ticks */
+    cctrl_func.CCtrlInitTimer ( 10, timer_function );
+20f820e0:	e59531a4 	ldr	r3, [r5, #420]
+20f820e4:	e3a0000a 	mov	r0, #10	; 0xa
+20f820e8:	e59f10fc 	ldr	r1, [pc, #252]	; 20f821ec <.text+0x1ec>
+20f820ec:	e1a0e00f 	mov	lr, pc
+20f820f0:	e12fff13 	bx	r3
+20f820f4:	e59f90f4 	ldr	r9, [pc, #244]	; 20f821f0 <.text+0x1f0>
+20f820f8:	e59f70e8 	ldr	r7, [pc, #232]	; 20f821e8 <.text+0x1e8>
+20f820fc:	e28da0a6 	add	sl, sp, #166	; 0xa6
+20f82100:	e28d80a8 	add	r8, sp, #168	; 0xa8
+20f82104:	e28db0ab 	add	fp, sp, #171	; 0xab
+
+    /* init watchdog */
+	//cctrl_func.CCtrlInitWdg( 10 );
+
+	for(;;)
+	{
+
+		/* trigger watchdog */
+		//cctrl_func.CCtrlTriggerWdg();
+
+		 /* Define data exchange for AS-i Circuit 1 and 2*/
+		 cctrl_func.AASiDataExchange(0, odi[0], idi[0], &ecflags);
+20f82108:	e595c100 	ldr	ip, [r5, #256]
+20f8210c:	e1a01006 	mov	r1, r6
+20f82110:	e28d2043 	add	r2, sp, #67	; 0x43
+20f82114:	e1a0300a 	mov	r3, sl
+20f82118:	e3a00000 	mov	r0, #0	; 0x0
+20f8211c:	e1a0e00f 	mov	lr, pc
+20f82120:	e12fff1c 	bx	ip
+		 cctrl_func.AASiDataExchange(1, odi[1], idi[1], &ecflags);
+20f82124:	e28d1023 	add	r1, sp, #35	; 0x23
+20f82128:	e28d2063 	add	r2, sp, #99	; 0x63
+20f8212c:	e1a0300a 	mov	r3, sl
+20f82130:	e5954100 	ldr	r4, [r5, #256]
+20f82134:	e3a00001 	mov	r0, #1	; 0x1
+20f82138:	e1a0e00f 	mov	lr, pc
+20f8213c:	e12fff14 	bx	r4
+
+		 /* read idi ASi-5 Slave logAddr 1 8I/8O */
+		 len = 1;
+20f82140:	e3a03001 	mov	r3, #1	; 0x1
+		 cctrl_func.Asi5ReadASi5Idi(0, &asi5_idi[0], &len, 0);
+20f82144:	e3a00000 	mov	r0, #0	; 0x0
+20f82148:	e1cd3ab8 	strh	r3, [sp, #168]
+20f8214c:	e595c348 	ldr	ip, [r5, #840]
+20f82150:	e28d10a3 	add	r1, sp, #163	; 0xa3
+20f82154:	e1a02008 	mov	r2, r8
+20f82158:	e1a03000 	mov	r3, r0
+20f8215c:	e1a0e00f 	mov	lr, pc
+20f82160:	e12fff1c 	bx	ip
+
+		 /* read idi ASi-5 Slave logAddr 2 16I */
+		 len = 2;
+20f82164:	e3a03002 	mov	r3, #2	; 0x2
+		 cctrl_func.Asi5ReadASi5Idi(0, &asi5_idi[1], &len, 1);
+20f82168:	e595c348 	ldr	ip, [r5, #840]
+20f8216c:	e28d10a4 	add	r1, sp, #164	; 0xa4
+20f82170:	e1cd3ab8 	strh	r3, [sp, #168]
+20f82174:	e1a02008 	mov	r2, r8
+20f82178:	e3a03001 	mov	r3, #1	; 0x1
+20f8217c:	e3a00000 	mov	r0, #0	; 0x0
+20f82180:	e1a0e00f 	mov	lr, pc
+20f82184:	e12fff1c 	bx	ip
+
+		//Timer 1 100 * 10ms = 1sec.
+		if ( ((unsigned short)(system_ticks - end_timer)) > 100)
+20f82188:	e59f3064 	ldr	r3, [pc, #100]	; 20f821f4 <.text+0x1f4>
+20f8218c:	e1d320b0 	ldrh	r2, [r3]
+20f82190:	e1d930b0 	ldrh	r3, [r9]
+20f82194:	e0633002 	rsb	r3, r3, r2
+20f82198:	e1a03803 	mov	r3, r3, lsl #16
+20f8219c:	e3530719 	cmp	r3, #6553600	; 0x640000
+		{
+			end_timer = system_ticks;
+20f821a0:	859f3048 	ldrhi	r3, [pc, #72]	; 20f821f0 <.text+0x1f0>
+20f821a4:	81c320b0 	strhih	r2, [r3]
+			odi[0][2] ^= 0x10;
+20f821a8:	85dd3005 	ldrhib	r3, [sp, #5]
+20f821ac:	82233010 	eorhi	r3, r3, #16	; 0x10
+20f821b0:	85cd3005 	strhib	r3, [sp, #5]
+		}
+
+		/* to check Cycletime */
+		cctrl_func.CCtrlEvalCycletime();
+20f821b4:	e59731b4 	ldr	r3, [r7, #436]
+20f821b8:	e1a0e00f 	mov	lr, pc
+20f821bc:	e12fff13 	bx	r3
+
+		/*read flags if we should stop control*/
+		cctrl_func.CCtrlReadFlags( &ctrl_flags );
+20f821c0:	e59721c0 	ldr	r2, [r7, #448]
+20f821c4:	e1a0000b 	mov	r0, fp
+20f821c8:	e1a0e00f 	mov	lr, pc
+20f821cc:	e12fff12 	bx	r2
+		if ( !( ctrl_flags & CCTRL_FLAG_RUN ) )
+20f821d0:	e5dd30ab 	ldrb	r3, [sp, #171]
+20f821d4:	e3130001 	tst	r3, #1	; 0x1
+20f821d8:	1affffca 	bne	20f82108 <main+0x84>
+		{
+			return 1;
+		}
+	
+	}
+}
+20f821dc:	e3a00001 	mov	r0, #1	; 0x1
+20f821e0:	e28dd0ac 	add	sp, sp, #172	; 0xac
+20f821e4:	e8bd8ff0 	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+20f821e8:	20f80000 	rsccss	r0, r8, r0
+20f821ec:	20f8206c 	rsccss	r2, r8, ip, rrx
+20f821f0:	20f821fa 	ldrcssht	r2, [r8], #26
+20f821f4:	20f821f8 	ldrcssht	r2, [r8], #24

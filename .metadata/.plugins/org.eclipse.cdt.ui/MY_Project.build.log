@@ -1,0 +1,27 @@
+
+**** Build of configuration release for project MY_Project ****
+
+C:\eclipse_control\Compiler\msys32\usr\bin\sh -c export PATH=../../Compiler/msys32/usr/bin:$PATH ;make -sf pnio.mak DEBUG=1 all 
+ -----------------------
+  control -- Release  
+ -----------------------
+ 
+
+startup.c ...
+
+main.c ...
+main.c: In function 'main':
+main.c:67:45: warning: unused variable 'i' [-Wunused-variable]
+         int                                 i = 0;
+                                             ^
+
+control_io.c ...
+
+writing .release/control.sym ...
+
+   ROM:    328 ( 0.12%)
+   RAM:      4 ( 0.00%)
+        -------
+Memory:    332 ( 0.13%)
+
+writing .release/control.lss ...

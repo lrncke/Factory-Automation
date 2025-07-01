@@ -1,0 +1,166 @@
+/*-------------------------------------------------------------------*
+ *                                                                   *
+ *                       Bihl+Wiedemann GmbH                         *
+ *                                                                   *
+ *                                                                   *
+ *       project: AS-i C-Control                                     *
+ *   module name: control.h                                          *
+ *        author: Christian Sommerfeld                               *
+ *          date: 2011-03-16                                         *
+ *                                                                   *
+ *      RCS info:                                                    *
+ *         $Date: 2011/03/09 11:06:08 $
+ *     $Revision: 1.3 $
+ */
+/*! \file
+ *	\brief
+ *
+ */
+/*                                                                   *
+ *-------------------------------------------------------------------*/
+#include "control.h"
+#include "control_io.h"
+
+
+int read_bit (AASiProcessData idi, int slave_addr, int bit)
+{
+	int idi_byte_nr;
+	int idi_nibble; //1 = high, 0= low
+	char maske=0;
+	int shift=0;
+
+	//Funktion wird nur ausgeführt wenn Werte gültig sind
+	if ((slave_addr<64)&&(bit < 4))
+	{
+		idi_byte_nr = slave_addr / 2;
+		idi_nibble = slave_addr % 2;
+
+			switch (bit)
+			{
+				case 0:
+					if (idi_nibble == 0)
+					{
+						maske = 0x01;
+						shift = 0;
+					}
+					else
+					{
+						shift = 4;
+						maske = 0x10;
+					}
+				break;
+
+				case 1:
+					if (idi_nibble == 0)
+					{
+						shift = 1;
+						maske = 0x02;
+					}
+					else
+					{
+						shift = 5;
+						maske = 0x20;
+					}
+				break;
+
+				case 2:
+					if (idi_nibble == 0)
+					{
+						shift = 2;
+						maske = 0x04;
+					}
+					else
+					{
+						shift = 6;
+						maske = 0x40;
+					}
+				break;
+
+				case 3:
+					if (idi_nibble == 0)
+					{
+						shift = 3;
+						maske = 0x08;
+					}
+					else
+					{
+						shift = 7;
+						maske = 0x80;
+					}
+				break;
+			}
+			return ((idi[idi_byte_nr] & maske) >> shift);
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+void write_bit(AASiProcessData odi, int slave_addr, int bit, int value)
+{
+	int idi_byte_nr;
+	int idi_nibble; //1 = high, 0= low
+	char maske;
+
+		idi_byte_nr = slave_addr / 2;
+		idi_nibble = slave_addr % 2;
+
+		switch (bit)
+		{
+			case 0:
+				if (idi_nibble == 0)
+				{
+					maske = 0x01;
+				}
+				else
+				{
+					maske = 0x10;
+				}
+			break;
+
+			case 1:
+				if (idi_nibble == 0)
+				{
+					maske = 0x02;
+				}
+				else
+				{
+					maske = 0x20;
+				}
+			break;
+
+			case 2:
+				if (idi_nibble == 0)
+				{
+					maske = 0x04;
+				}
+				else
+				{
+					maske = 0x40;
+				}
+			break;
+
+			case 3:
+				if (idi_nibble == 0)
+				{
+					maske = 0x08;
+				}
+				else
+				{
+					maske = 0x80;
+				}
+			break;
+		}
+
+		if(value == 0)
+		{
+			odi[idi_byte_nr] &= ~maske;
+		}
+		else
+		{
+			odi[idi_byte_nr] |= maske;
+		}
+
+}
+

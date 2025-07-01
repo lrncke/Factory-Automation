@@ -1,0 +1,218 @@
+#---------------------------------------------------------------------#
+#                                                                     #
+#                        Bihl+Wiedemann GmbH                          #
+#                                                                     #
+#                                                                     #
+#        project: PNIO Gateway                                        #
+#    module name: pnio.mak                                            #
+#         author: Christian Kraus                                     #
+#           date: 2008-10-13                                          #
+#                                                                     #
+#       VCS info:                                                     #
+#          $Date: 2011/05/31 16:57:26 $
+#      $Revision: 1.1.2.2 $
+#                                                                     #
+#    description:                                                     #
+#                                                                     #
+#                                                                     #
+#---------------------------------------------------------------------#
+
+
+
+
+export PATH  := ../../Compiler/WinARM/bin:../../Compiler/msys/1.0/bin
+TARGET        = control
+
+
+#---------------------------------------------------------------------#
+#   stuff to be executed unconditionally                              #
+#---------------------------------------------------------------------#
+
+ifeq ($(MAKELEVEL),0)
+	DUMMY:=$(shell echo -en "" \
+			"-----------------------\n" \
+			" $(TARGET) -- Release  \n" \
+			"-----------------------\n" \
+			"\n" \
+			>&2)
+
+	OUTDIR=.release
+	FIND= ../../Compiler/Tools/find.exe
+	YHEX= ../../Compiler/Tools/yhex.exe
+	
+	export OUTDIR
+	DUMMY:=$(shell if ! [ -d $(OUTDIR) ]; then mkdir $(OUTDIR); fi)
+
+endif
+
+#---------------------------------------------------------------------#
+#   macros                                                            #
+#---------------------------------------------------------------------#
+
+#-- sources ----------------------------------------------------------#
+
+SRC =	startup.c \
+		main.c		\
+		control_io.c
+
+#-- command line flags -----------------------------------------------#
+
+CFLAGS   = \
+	-mcpu=arm9tdmi \
+	-Wall \
+	-Wpointer-arith \
+	-Wstrict-prototypes \
+	-Winline -Wundef \
+	-g \
+	-I. \
+	-fno-schedule-insns \
+	-ffunction-sections \
+	-fdata-sections \
+	-fno-exceptions \
+	-ansi \
+	-std=gnu99 \
+	-DSIGNATURE=111 \
+	-MD \
+	-MP \
+	-MF $(OUTDIR)/$(notdir $(<:.c=.d))
+
+ifneq ($(strip $(DEBUG)),0)
+CFLAGS += -O0
+else
+CFLAGS += -O3
+endif
+
+LDFLAGS  = \
+	-Wl,-Map=$(OUTDIR)/$(TARGET).map,--cref \
+	-mcpu=arm9tdmi \
+	-Wl,--gc-sections \
+	-Wl,-static \
+	-Tpnio.ld
+
+#-- tools ------------------------------------------------------------#
+
+CC       = arm-elf-gcc
+OBJCOPY  = arm-elf-objcopy -S -g
+OBJDUMP  = arm-elf-objdump
+SIZE     = arm-elf-size
+NM       = arm-elf-nm
+REMOVE   = rm -f
+COPY     = cp
+SHELL    = sh
+
+
+#---------------------------------------------------------------------#
+
+OBJ = $(addprefix $(OUTDIR)/,$(notdir $(SRC:.c=.o) ))
+
+.PRECIOUS: $(OBJ)
+
+
+#---------------------------------------------------------------------#
+#   pattern rules                                                     #
+#---------------------------------------------------------------------#
+
+# create object files from C source files.
+
+$(OUTDIR)/%.o : %.c
+	@echo -e "\n$< ..."
+	$(CC) -c $(CFLAGS) $< -o $@
+
+# create ELF output file from object files.
+
+%.elf: $(OBJ)
+	@echo -e "\nwriting $@ ..."
+	$(CC) $(CFLAGS) $(OBJ) --output $@ $(LDFLAGS)
+
+# create final output file from ELF output file
+
+%.bin: %.elf
+	@echo -e "\nwriting $@ ..."
+	$(OBJCOPY) -O binary -R .funcarea $< $@
+
+
+%.bin: $(OUTDIR)/%.bin
+	@echo "\nwriting $@ ..."
+	$(YHEX) --verbosity=2 --overwrite-query=off \
+		--input=$< --format=bin --range=0,$$((($$($(FIND) "$<" -printf "%s")) -1)) \
+		--procedure=sum:method=sum16le --range=0,$$((($$($(FIND) "$<" -printf "%s")) +1)) \
+		--output=$@ --format=bin
+
+# create a symbol table from ELF output file.
+
+%.sym: %.elf
+	@echo -e "\nwriting $@ ..."
+	$(NM) -n $< > $@
+
+
+
+# create extended listing file from ELF output file.
+
+%.lss: %.elf
+	@echo -e "\nwriting $@ ..."
+	$(OBJDUMP) -h -S $< > $@
+
+
+
+#---------------------------------------------------------------------#
+#   description blocks                                                #
+#---------------------------------------------------------------------#
+
+.SECONDARY:
+
+#-- default target ---------------------------------------------------#
+
+.PHONY: all
+all: ctrl bin sym show_size
+
+
+
+#-- clean target -----------------------------------------------------#
+
+.PHONY: clean
+clean:
+	@echo -e "\ncleaning up ..."
+	rm -rf $(OUTDIR)/
+	rm -rf $(TARGET).bin
+	@echo -e "\ncleaning done ..."
+
+
+#-- secondary targets ------------------------------------------------#
+
+.PHONY: show_size
+show_size:
+	@if [ -f $(OUTDIR)/$(TARGET).elf ]; then echo; $(SIZE) -A $(OUTDIR)/$(TARGET).elf; echo; fi
+
+.PHONY: ctrl
+bin:  $(TARGET).bin
+
+.PHONY: bin
+bin:  $(OUTDIR)/$(TARGET).bin
+
+.PHONY: sym
+sym:  $(OUTDIR)/$(TARGET).sym
+
+.PHONY: lss
+lss:  $(OUTDIR)/$(TARGET).lss
+
+.PHONY: elf
+lss:  $(OUTDIR)/$(TARGET).elf
+
+.PHONY: everything
+everything: bin mot lss xlist sym show_size
+
+
+
+#---------------------------------------------------------------------#
+#   invocation file creation                                          #
+#---------------------------------------------------------------------#
+
+#---------------------------------------------------------------------#
+#   explicit dependents                                               #
+#---------------------------------------------------------------------#
+
+-include $(wildcard $(OUTDIR)/*.d) dummy.d
+
+#---------------------------------------------------------------------#
+#   eof                                                               #
+#---------------------------------------------------------------------#

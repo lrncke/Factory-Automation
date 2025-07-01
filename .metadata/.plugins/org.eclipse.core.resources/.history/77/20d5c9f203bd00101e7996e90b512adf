@@ -1,0 +1,126 @@
+/*-------------------------------------------------------------------*
+ *                                                                   *
+ *                       Bihl+Wiedemann GmbH                         *
+ *                                                                   *
+ *                                                                   *
+ *       project: C-Control Programm                                 *
+ *   Sample name: 			                                         *
+ *        author: Christian Lang				                     *
+ *          date: 20.03.11			                                 *
+ *                                                                   *
+ *      RCS info:                                                    *
+ *         $Date: 2009/10/21 12:37:52 $
+ *     $Revision: 1.1.2.1.2.2 $
+ */
+/*! \file
+ *	\brief	
+ *
+ */
+/*                                                                    *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  include files                                                    *
+ *-------------------------------------------------------------------*/
+//#include "string.h"
+#include "control.h"
+#include "control_io.h"
+/*-------------------------------------------------------------------*
+ *  local definitions                                                *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  public data                                                      *
+ *-------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------*
+ *  private data                                                     *
+ *-------------------------------------------------------------------*/
+volatile unsigned int system_ticks;
+volatile unsigned int end_timer;
+volatile unsigned int 		state;
+int bp_stop;
+
+AASiProcessData 	odi[2];
+AASiProcessData 	idi[2];
+/*-------------------------------------------------------------------*
+ *  private functions                                                *
+ *-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*
+ *  public functions                                                 *
+ *-------------------------------------------------------------------*/
+
+static void timer_function ( void )
+{
+	/* timer interrupt every 10 ms */
+	system_ticks++;
+}
+
+int main()
+{
+	//Init GDB
+	//cctrl_func.CCtrlBreakpoint();
+
+
+	unsigned char flags;
+
+	AASiCtrlAccODI acc_odi;
+	AASiEcFlags    ecflags;
+
+	int K1_SL3a_B2;    // Wert des Bit 2 von Slave 3a Kreis 1
+
+
+    /* init timer function with 10 ms ticks */
+    cctrl_func.CCtrlInitTimer(10, timer_function);
+
+    /*Delay in ms*/
+	cctrl_func.CCtrlDelay(2000);
+
+	/*Write Access Circuit 1, Slave 3, Bit 0-3*/
+	acc_odi[0] = 0x0F;
+	cctrl_func.AASiWriteCtrlAccODI(0, acc_odi, 3, 1);
+
+	for(;;)
+    {
+		 /* Define data exchange for AS-i Circuit 1 and 2*/
+		 cctrl_func.AASiDataExchange(0, odi[0], idi[0], &ecflags);
+		 cctrl_func.AASiDataExchange(1, odi[1], idi[1], &ecflags);
+
+		//Timer 1 1sec.
+		if ((system_ticks - end_timer) > 100)
+		{
+			//do something
+			end_timer = system_ticks;
+		}
+		//Timer 2 10sec.
+		if ((system_ticks - end_timer) > 1000)
+		{
+			//do something
+			end_timer = system_ticks;
+		}
+
+		 /*read bit 2 from Slave 3 at circuit 1*/
+		 K1_SL3a_B2 = read_bit(idi[0], 3, 2);
+		 /*write bit K1_SL3a_B2 to Slave 4B at circuit 2*/
+		 write_bit(odi[1], 36, 1, K1_SL3a_B2);
+
+		/*to get the cycle time*/
+		cctrl_func.CCtrlEvalCycletime();
+
+		/*read flags if we should stop control*/
+		cctrl_func.CCtrlReadFlags( &flags );
+		if ( !( flags & CCTRL_FLAG_RUN ) )
+		{
+			return 1;
+		}
+
+	} // for (;;)  
+
+	return 0;
+}
+
+/*-------------------------------------------------------------------*
+ *  eof                                                              *
+ *-------------------------------------------------------------------*/
