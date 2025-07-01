@@ -1,7 +1,7 @@
 # Factory-Automation
 
 ## Verzeichnisstruktur
-Das Repo ist auf dem Laptop jetzt direkt im eclipse-Workspace damit wir den Code direkt mit git verwalten können. Alle Sachen, die  nichts mit eclipse zu tun haben, sind eine Ebene nach unten in das Verzeichnis **Dokumentation** gewandert. Also Sachen wie Datenblätter etc. kommt alles in die entsprechenden Unterverzeichnisse dort. 
+Das Repo ist auf dem Laptop jetzt direkt im eclipse-Workspace damit wir den Code direkt mit git verwalten können. Alle Sachen, die  nichts mit eclipse zu tun haben, sind eine Ebene nach unten in das Verzeichnis **Dokumente** gewandert. Also Sachen wie Datenblätter etc. kommt alles in die entsprechenden Unterverzeichnisse dort. 
 
 ## Nützliche Links 
 
