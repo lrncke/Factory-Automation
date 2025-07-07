@@ -1,0 +1,10 @@
+=====07.07.2025=====
+
+1. Umverdrahtung der Anlage, sodass die Aus- und Eingänge auf den ASi-Slaves liegen
+2. Projektierungsmodus im Webserver, alle 5 Slaves aufnehmen
+3. Um chronologische Reihenfolge beizubehalten, Slaves nacheinander in passender Reihenfolge hinzufügen
+4. Falls schon nicht passende Adresse im Slave, dann einmal löschen und neu aufnehmen
+5. Logische Adresse ist wichtig für die Programmierung, der Slave ist dort über diese Adresse ansprechbar (Logische Adresse ist das Byte)
+	Bsp: Ein Slave hat logische Adresse 1 und 16 I/Os, dann bekommt der nächste Slave (8 I/Os) die logische Adresse 3 und der nächste 	     Slave die logische Adresse 4
+6. Alle Slaves haben nun die korrekte Adresse (chronologisch) und wir beginnen mit kleinen Programmierungen
+7. Alle Platten brauchen die 24V 0V Versorgung, auch die Ein- und Ausgangsplatten
