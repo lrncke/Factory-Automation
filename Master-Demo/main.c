@@ -1,18 +1,15 @@
 /*-------------------------------------------------------------------*
+ *  Dieses Programm initialisiert 5 16-Port I/O-Module.              *
+ *  Zudem wird die Programmierung eines Moduls am ersten Teil        *
+ *  der Fertigungsstrecke demonstriert.                              *
  *                                                                   *
- *                       Bihl+Wiedemann GmbH                         *
- *                                                                   *
- *                                                                   *
- *       project: Control_III                                        *
- *   module name: main.c                                             *
- *        author: Christian Sommerfeld                               *
- *          date: 2015-02-26                                         *
- *                                                                   *
- *  version: 1.0 first version                                       *
- *                                                                   *
- *                                                                   *
-                                                 *
+ *  Eine Platte muss dazu händisch an das Bandende gelegt werden.    *
+ *  Wird die Platte am linken Bandende registriert, ändert sich die  *
+ *  Lampenfarbe und der Bandrechtslauf wird aktiviert, bis die       *
+ *  Platte am rechten Bandende registriert wird. Dann stoppt das     *
+ *  Band und die Lampenfarbe wechselt erneut.                        *
  *-------------------------------------------------------------------*/
+
 
 /*-------------------------------------------------------------------*
  *  include files                                                    *
@@ -29,10 +26,10 @@
 
 #define BANDENDE_LINKS 	0x01
 #define BANDENDE_RECHTS 0x01<<4
-#define START_BUTTON 0x01<<7
+#define START_BUTTON 	0x01<<7
 #define BAND_RECHTSLAUF 0x01<<1
-#define LAMPE_ROT 0x01<<3
-#define LAMPE_GRUEN 0x01<<7
+#define LAMPE_ROT 		0x01<<3
+#define LAMPE_GRUEN 	0x01<<7
 
 /*-------------------------------------------------------------------*
  *  external declarations                                            *
@@ -68,15 +65,14 @@ int main ( void )
         //initialization of the Debugger
         //cctrl_func.CCtrlBreakpoint();
 
-        unsigned char                ctrl_flags;
-        unsigned char                asi5_accodi[10];//Länge entspricht der Anzahl der in der Anlage vorhandenen logischen Adressen
-        unsigned char                asi5_odi[10];//Ausgänge die gesetzt werden sollen (Hex-Werte)
-
-        unsigned char               asi5_idi[10];//Eingänge die gelesen werden sollen (Hex-Werte)
-
-        unsigned short 				length 			= 2;
-        int zustand = 1;
-        /* Access ASi5 logical Slave 1 (1 Byte / Slave) */
+        unsigned char               ctrl_flags;
+        unsigned char               asi5_accodi[10];		// 2 Byte Daten pro Modul. 5 Module = 10 Byte.
+        unsigned char               asi5_odi[10];			// 2 Byte Daten pro Modul. 5 Module = 10 Byte.
+        unsigned char               asi5_idi[10];			// 2 Byte Daten pro Modul. 5 Module = 10 Byte.
+        unsigned short 				length 	= 2;
+        int 						zustand = 1;
+		
+        /* Output für alle Ports enablen  */
         asi5_accodi[0] = 0xFF;
         asi5_accodi[1] = 0xFF;
         asi5_accodi[2] = 0xFF;
@@ -88,7 +84,8 @@ int main ( void )
 		asi5_accodi[8] = 0xFF;
 		asi5_accodi[9] = 0xFF;
 
-        cctrl_func.Asi5WriteCtrlAccODI(0, asi5_accodi, 2, 1);
+		/* Werte an Module schreiben */
+        cctrl_func.Asi5WriteCtrlAccODI(0, &asi5_accodi[0], 2, 1);
         cctrl_func.Asi5WriteCtrlAccODI(0, &asi5_accodi[2], 2, 3);
         cctrl_func.Asi5WriteCtrlAccODI(0, &asi5_accodi[4], 2, 5);
         cctrl_func.Asi5WriteCtrlAccODI(0, &asi5_accodi[6], 2, 7);
@@ -100,7 +97,8 @@ int main ( void )
         /* init watchdog */
         //cctrl_func.CCtrlInitWdg( 10 );
 
-    	asi5_odi[0] = 0x00; 									//alle ausgänge 0 setzen
+		/* Alle ausgänge 0 setzen */
+    	asi5_odi[0] = 0x00;
     	asi5_odi[1] = 0x00;
     	asi5_odi[2] = 0x00;
     	asi5_odi[3] = 0x00;
@@ -110,13 +108,13 @@ int main ( void )
     	asi5_odi[7] = 0x00;
     	asi5_odi[8] = 0x00;
     	asi5_odi[9] = 0x00;
-		cctrl_func.Asi5WriteASi5Odi(0, asi5_odi, 2, 1);			// odi schreiben
-		cctrl_func.Asi5WriteASi5Odi(0, &asi5_odi[2], 2, 3);			// odi schreiben
+		
+		/* Werte an Module schreiben */
+		cctrl_func.Asi5WriteASi5Odi(0, &asi5_odi[0], 2, 1);			
+		cctrl_func.Asi5WriteASi5Odi(0, &asi5_odi[2], 2, 3);			
 		cctrl_func.Asi5WriteASi5Odi(0, &asi5_odi[4], 2, 5);
 		cctrl_func.Asi5WriteASi5Odi(0, &asi5_odi[6], 2, 7);
 		cctrl_func.Asi5WriteASi5Odi(0, &asi5_odi[8], 2, 9);
-
-		//int flag =
 
 
         for(;;)
@@ -129,11 +127,11 @@ int main ( void )
 
 
                 //Timer 1 100 * 10ms = 1sec.
-                if ( ((unsigned short)(system_ticks - end_timer)) > 50)
+                if ( ((unsigned short)(system_ticks - end_timer)) > 100)
                 {
                         end_timer = system_ticks;
 
-                        cctrl_func.Asi5ReadASi5Idi(0, asi5_idi, &length, 1);			// es werden 2 bytes von bwu8334 gelesen
+                        cctrl_func.Asi5ReadASi5Idi(0, asi5_idi, &length, 1);			// es werden 2 bytes gelesen
 
 
                         //Zustandsübergänge
@@ -171,4 +169,3 @@ int main ( void )
 /*-------------------------------------------------------------------*
  *  eof                                                              *
  *-------------------------------------------------------------------*/
-//E79 -> Fehler im Programm, Variable nicht definiert oder ähnliches
